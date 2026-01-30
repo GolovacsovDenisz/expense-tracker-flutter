@@ -62,16 +62,26 @@ Supports **multi-user auth**, **CRUD expenses**, **period-based analytics**, and
 </p>
 
 ---
-
-## 🚀 Getting Started
+## 🚀 Run locally
 
 ### Prerequisites
-- Flutter SDK (stable)
-- A Firebase project
-- Android Studio / Xcode (emulator) or a physical device
+- Flutter (stable)
+- A Firebase project with **Auth** + **Firestore**
 
-### 1) Clone the repository
+### Setup
+
 ```bash
-git clone https://github.com/<your-username>/expense-tracker-flutter.git
+git clone https://github.com/GolovacsovDenisz/expense-tracker-flutter.git
 cd expense-tracker-flutter
 flutter pub get
+
+
+Firebase
+
+This project uses Firebase Auth + Firestore.
+
+You need to create your own Firebase project and add config files:
+	•	android/app/google-services.json
+	•	ios/Runner/GoogleService-Info.plist 
+
+  then run flutter run
