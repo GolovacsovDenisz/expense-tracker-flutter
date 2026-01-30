@@ -48,11 +48,18 @@ Supports **multi-user auth**, **CRUD expenses**, **period-based analytics**, and
 ---
 
 ## 📸 Screenshots
-_Add 6–10 screenshots here (Home, Dashboard, Add, Filters, Settings, Dark mode)._
 
-Example:
-- `assets/screenshots/home.png`
-- `assets/screenshots/dashboard.png`
+<p float="left">
+  <img src="assets/screenshots/login_reg.png" width="250" />
+  <img src="assets/screenshots/home.png" width="250" />
+  <img src="assets/screenshots/add.png" width="250" />
+</p>
+
+<p float="left">
+  <img src="assets/screenshots/dashboard.png" width="250" />
+  <img src="assets/screenshots/period_filter.png" width="250" />
+  <img src="assets/screenshots/undo_dark.png" width="250" />
+</p>
 
 ---
 
