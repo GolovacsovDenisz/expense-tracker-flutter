@@ -612,7 +612,10 @@ class _ExpenseRow extends StatelessWidget {
         final removed = e;
 
         final messenger = messengerKeyImp.currentState;
-        messenger?.clearSnackBars();
+
+        // важно: прячем текущий (анимацией), а не "чистим"
+        messenger?.hideCurrentSnackBar();
+
         messenger?.showSnackBar(
           SnackBar(
             content: const Text('Expense deleted'),
@@ -627,6 +630,14 @@ class _ExpenseRow extends StatelessWidget {
             ),
           ),
         );
+
+        // (опционально, но железобетонно) — если вдруг где-то залипнет,
+        // принудительно закроем после duration
+        Future.delayed(const Duration(seconds: 2), () {
+          if (messenger?.mounted ?? false) {
+            messenger?.hideCurrentSnackBar();
+          }
+        });
 
         await repo.deleteExpense(removed.id);
         return true;
